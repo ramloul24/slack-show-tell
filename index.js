@@ -12,7 +12,7 @@ require('./route')(app);
 
 var selectedIdsSoFar = []; // global array to keep track of userIds selected already
 
-cron.schedule('*/1 * * * *', () => {
+cron.schedule('0 19 * * *', () => {
     let [selectedId, selectedIds] = selectId(testIds, selectedIdsSoFar);
     selectedIdsSoFar = selectedIds;
     console.log(selectedId);
